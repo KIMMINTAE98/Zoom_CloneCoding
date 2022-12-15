@@ -10,6 +10,17 @@ html(lang="en")
         header
             h1 Noom
         main 
-            video#myFace(autoplay,playsinline, width="400", height="400") 
+            div#welcome
+                form
+                    input(placeholder="room name", required, type="text")
+                    button Enter room
+            div#call
+                div#myStream
+                    video#myFace(autoplay, playsinline, width="400", height="400") 
+                    button#mute Mute
+                    button#camera Ture Camera Off
+                    select#cameras 
+                video#peersFace(autoplay, playsinline, width="400", height="400") 
+
         script(src="/socket.io/socket.io.js")   // install socketIO to client          
         script(src="/public/js/app.js")
