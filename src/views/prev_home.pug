@@ -10,6 +10,11 @@ html(lang="en")
         header
             h1 Noom
         main 
-            video#myFace(autoplay,playsinline, width="400", height="400") 
-        script(src="/socket.io/socket.io.js")   // install socketIO to client          
+            form#nickname
+                input(type="text", placeholder="choose a nickname", required)
+                button Save
+            ul
+            form#message
+                input(type="text", placeholder="write a msg", required)
+                button Send
         script(src="/public/js/app.js")
